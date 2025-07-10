@@ -1,0 +1,23 @@
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+  
+.favorito-card {
+    position: relative;
+}
+  
+.btn-remove {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+  

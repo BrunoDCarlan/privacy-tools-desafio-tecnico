@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { buscarCatalogo } from '../services/api';
-import BuscaBar from '../components/BuscaBar';
+import BuscaBar from '../components/buscabar';
 import CatalogoCarrossel from '../components/catalogocarrossel';
 import '../styles/home.css';
 
