@@ -1,15 +1,11 @@
+import React from 'react';
 import Slider from 'react-slick';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import type { Filme } from '../types';
 import { FilmeCard } from './filmecard';
+import '../styles/catalogocarrossel.css';
 
-interface Props {
-  filmes: Filme[];
-  titulo: string;
-}
-
-export default function CatalogoCarrossel({ titulo, filmes }: Props) {
+export default function CatalogoCarrossel({ titulo, filmes }) {
   const settings = {
     dots: false,
     infinite: true,
@@ -21,12 +17,12 @@ export default function CatalogoCarrossel({ titulo, filmes }: Props) {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 4, slidesToScroll: 2 } },
-      { breakpoint: 600, settings: { slidesToShow: 3, slidesToScroll: 1 } },
-      { breakpoint: 480, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 600,  settings: { slidesToShow: 3, slidesToScroll: 1 } },
+      { breakpoint: 480,  settings: { slidesToShow: 2, slidesToScroll: 1 } },
     ],
   };
 
-  function SampleNextArrow(props: any) {
+  function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
       <button
@@ -46,7 +42,7 @@ export default function CatalogoCarrossel({ titulo, filmes }: Props) {
     );
   }
 
-  function SamplePrevArrow(props: any) {
+  function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
       <button

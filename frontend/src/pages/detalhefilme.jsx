@@ -1,13 +1,12 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { buscarFilmePorId } from '../services/api';
-import type { Filme } from '../types';
 import '../styles/detalhefilme.css';
 
 export default function DetalheFilme() {
-  const { id } = useParams<{ id: string }>();
-  const [filme, setFilme] = useState<Filme | null>(null);
-  const [erro, setErro] = useState<string | null>(null);
+  const { id } = useParams();
+  const [filme, setFilme] = useState(null);
+  const [erro, setErro] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -17,7 +16,7 @@ export default function DetalheFilme() {
       try {
         const data = await buscarFilmePorId(id);
         setFilme(data);
-      } catch (e: any) {
+      } catch (e) {
         setErro(e.message);
       } finally {
         setLoading(false);
@@ -26,7 +25,7 @@ export default function DetalheFilme() {
   }, [id]);
 
   if (loading) return <p className="p-6 text-white">Carregando...</p>;
-  if (erro) return <p className="p-6 text-red-500">{erro}</p>;
+  if (erro)   return <p className="p-6 text-red-500">{erro}</p>;
   if (!filme) return null;
 
   return (
@@ -35,13 +34,11 @@ export default function DetalheFilme() {
         ← Voltar
       </Link>
       <div className="container">
-        <img
-          src={filme.Poster}
-          alt={filme.Title}
-          className="poster"
-        />
+        <img src={filme.Poster} alt={filme.Title} className="poster" />
         <div className="info">
-          <h1 className="title">{filme.Title} ({filme.Year})</h1>
+          <h1 className="title">
+            {filme.Title} ({filme.Year})
+          </h1>
           <p className="meta">
             <strong>Gênero:</strong> {filme.Genre}  
             <strong> • Diretor:</strong> {filme.Director}
