@@ -1,5 +1,5 @@
 export interface Filme {
-    ImdbId: string;
+    imdbID: string;
     Title: string;
     Year: string;
     Poster: string;

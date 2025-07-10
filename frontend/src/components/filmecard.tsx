@@ -9,9 +9,12 @@ export function FilmeCard({ filme }: { filme: Filme }) {
         alt={filme.Title}
         className="poster"
       />
-      <h3 className="title">
-        {filme.Title} <span className="year">({filme.Year})</span>
-      </h3>
+      <div className="info-overlay">
+        <h3 className="title-filmecard">
+          {filme.Title}
+        </h3>
+        <span className="year">({filme.Year})</span>
+      </div>
     </div>
   );
 }
