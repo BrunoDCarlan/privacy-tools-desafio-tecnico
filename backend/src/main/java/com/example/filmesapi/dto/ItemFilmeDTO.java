@@ -15,16 +15,13 @@ public class ItemFilmeDTO {
     @JsonProperty("imdbID")
     private String imdbId;
 
-    @JsonProperty("Type")
-    private String type;
 
     @JsonProperty("Poster")
     private String poster;
-    public ItemFilmeDTO(String title, String year, String imdbId, String type, String poster) {
+    public ItemFilmeDTO(String title, String year, String imdbId, String poster) {
         this.title = title;
         this.year = year;
         this.imdbId = imdbId;
-        this.type = type;
         this.poster = poster;
     }
 }

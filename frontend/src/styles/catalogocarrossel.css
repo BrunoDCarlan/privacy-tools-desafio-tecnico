@@ -1,0 +1,56 @@
+.carrossel {
+    position: relative;
+    margin-bottom: 3rem;
+}
+  
+.titulo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    border-left: 4px solid #e50914;
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
+}
+  
+.lista {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    scroll-padding-left: 1.5rem;
+    scroll-snap-type: x mandatory;
+}
+  
+.lista::-webkit-scrollbar {
+    display: none;
+}
+  
+.lista > * {
+    scroll-snap-align: start;
+    transition: transform 0.3s ease-out;
+}
+  
+.lista > *:hover {
+    transform: scale(1.05);
+}
+  
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    z-index: 10;
+}
+  
+.arrowLeft {
+    left: 0.5rem;
+}
+  
+.arrowRight {
+    right: 0.5rem;
+}
+  

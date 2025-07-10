@@ -25,12 +25,20 @@ public class FilmeDTO {
     @JsonProperty("Poster")
     private String poster;
 
-    public FilmeDTO(String title, String year, String genre, String director, String plot, String poster) {
+    @JsonProperty("Type")
+    private String type;
+
+    @JsonProperty("imdbID")
+    private String imdbId;
+
+    public FilmeDTO(String title, String year, String genre, String director, String plot, String poster, String type, String imdbId) {
         this.title = title;
         this.year = year;
         this.genre = genre;
         this.director = director;
         this.plot = plot;
         this.poster = poster;
+        this.type = type;
+        this.imdbId = imdbId;
     }
 }

@@ -1,11 +1,13 @@
 package com.example.filmesapi.controller;
 
-import com.example.filmesapi.dto.*;
+import com.example.filmesapi.dto.FilmeDTO;
+import com.example.filmesapi.dto.ResultadoBuscaDTO;
 import com.example.filmesapi.service.FilmeService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/filmes")
 @Tag(name = "Filmes", description = "API de consulta de filmes na OMDb")

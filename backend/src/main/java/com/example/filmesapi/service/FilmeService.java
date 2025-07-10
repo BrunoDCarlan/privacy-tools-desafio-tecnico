@@ -2,6 +2,8 @@ package com.example.filmesapi.service;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import com.example.filmesapi.exception.FilmeNaoEncontradoException;
 import org.springframework.beans.factory.annotation.Value;

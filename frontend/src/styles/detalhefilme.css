@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.poster {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+  .poster {
+    width: 33.333%;
+  }
+}
+
+.info {
+  flex: 1;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.meta {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+.plot {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
